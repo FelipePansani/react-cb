@@ -1,0 +1,107 @@
+.mainCarousel {
+    background: #086688;
+    color: #ffffff;
+    display: flex;
+    height: 240px;
+}
+
+@media screen and (max-width: 1007px) {
+    .mainCarousel {
+        height: 160px;
+    }
+    .mainText {
+        display: none;
+    }
+    .fakeImage {
+        width: 300px;
+    }
+}
+
+.mainText {
+    height: 40%;
+}
+
+.title {
+    height: 20%;
+    color: rgb(224, 215, 131);
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, serif;
+}
+
+.fakeImage {
+    width: 600px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 48px;
+    transition: 0.6s;
+}
+
+.arrowColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.arrowColumn:hover {
+    opacity: 0.4;
+}
+
+.firstHalf {
+    flex: 1;
+    padding: 1rem;
+}
+
+.firstHalf .title {
+    transition: 1.8s;
+}
+
+@keyframes smooth {
+    
+}
+
+.bottomBtns {
+    display: flex;
+}
+
+.carouselBtn {
+    margin-top: 50px;
+    flex: 1;
+}
+
+.carouselBtn button {
+    height: 3px;
+    width: 40px;
+    border: none;
+    margin: 0.125rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.carouselBtn button:hover {
+    background: gray;
+}
+
+.doubleBtn {
+    margin-top: 30px;
+}
+
+.doubleBtn button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 0.525rem;
+    box-shadow: 0 0 0px 0.8px white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .mainText {
+        display: none;
+    }
+}

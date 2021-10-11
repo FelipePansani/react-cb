@@ -1,0 +1,109 @@
+.navbarBody {
+    position: fixed;
+    z-index: 1;
+    background: white;
+    width: 100%;
+}
+
+.navbar {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.navbar p {
+    text-align: right;
+    width: 80px;
+}
+
+
+.navbar ul {
+    background: rgb(248, 248, 248);
+    border-top: 1.6px solid rgb(226, 226, 226);
+    border-bottom: 0.01px solid rgb(235, 226, 173);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul a {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(54, 119, 172);
+    height: 50px;
+    padding: 4px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.row:nth-child(2) {
+    margin-right: 35px;
+}
+
+.searchIcon {
+    width: 40px;
+    height: 40px;
+}
+
+/* 
+.navbar nav {
+    margin-top: 60px;
+}
+*/
+
+.searchIconMenu {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .row:nth-child(1) a, .row:nth-child(3) a {
+        display: none;
+    }
+    .barsMenu {
+        display: inline-block;
+        z-index: 1;
+    }
+}
+
+.navbar a:hover, .navbar a:focus {
+    background: rgb(255, 255, 255)
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 1
+}
+
+.shapeImg {
+    position: relative;
+    margin-top: -25px;
+}
+
+.barsMenu {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.menuLine {
+    background: cornflowerblue;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    margin: 3px;
+    transition: 0.2s;
+}

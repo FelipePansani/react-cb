@@ -1,0 +1,33 @@
+.bottomcomponent {
+    border-left: 1.6px solid lightgray;
+    width: 400px;
+}
+
+.bottomcomponent a {
+    text-decoration: none;
+    color: rgb(34, 91, 138);
+}
+
+.bottomcomponent a:hover {
+    box-shadow: 0.8px 0.6px 5px rgb(65, 65, 65);
+    transition: 0.2s ease
+}
+
+.bottomcomponent .box {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 160px;
+    padding: 0 10px 0 0;
+    margin: 5px 15px;
+    background: rgb(238, 238, 238)
+}
+
+.bottomcomponent .icon {
+    border-radius: 5px 0 0 5px;
+    background: rgb(34, 91, 138);
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    margin-right: 8px;
+}
