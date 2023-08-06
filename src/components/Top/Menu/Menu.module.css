@@ -1,0 +1,46 @@
+.menu {
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right: 0;
+    z-index: 10;
+    background: var(--primary-blue);
+    padding: 30px;
+}
+
+@keyframes moveRight {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.option a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--primary-yellow);
+    text-decoration: none;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.option a p {
+    color: var(--primary-gray);
+    font-size: 16px;
+}
+
+.closeBtn {
+    cursor: pointer;
+}
+
+.closeBtn > * {
+    font-size: 24px;
+    background: var(--primary-blue);
+    color: var(--primary-yellow);
+}

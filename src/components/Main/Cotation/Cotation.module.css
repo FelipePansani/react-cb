@@ -1,0 +1,68 @@
+.cotation {
+    width: auto;
+    padding: 20px;
+}
+
+.cotationMain {
+    border-left: 1.4px solid rgb(232, 232, 232);
+    padding-left: 20px;
+}
+
+div>h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.boldText {
+    font-weight: 600;
+    color: var(--sec-blue);
+}
+
+.currencyList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 0px 0px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+
+#firstRow {
+    font-weight: 800;
+    color: var(--sec-blue);
+    border: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dotted lightgray;
+}
+
+.row:nth-child(1) p {
+    font-size: 14.5px;
+}
+
+.row p {
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
+.day {
+    display: flex;
+    width: 30%;
+}
+
+.rates {
+    display: flex;
+    width: 70%;
+}
+
+.rates p {
+    width: 100%;
+    text-align: right;
+}

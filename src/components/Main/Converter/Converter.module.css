@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+.conversorBox {
+    width: 98%;
+    padding: 20px;
+}
+
+.conversor {
+    border-left: 1.4px solid var(--lighest-gray);
+    padding-left: 15px;
+}
+
+h2 {
+    font-weight: 600;
+    color: var(--primary-blue)
+}
+
+.conversor input {
+    height: 28px;
+    text-align: right;
+    padding: 5px 6px 6px 5px;
+    width: 110px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    color: rgb(70, 70, 70);
+    border: 1px solid #137a97;
+    border-radius: 2.8px;
+}
+
+.smallText {
+    font-size: 11px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.row,
+.rowFirst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.select {
+    display: flex;
+    flex: 1;
+    margin: 8px 0 5px 0;
+}
+
+.row div:nth-child(1) {
+    width: 60%;
+}
+
+.select .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: white;
+    height: 32px;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    border: 3.0px solid white;
+}
+
+.select .menu img {
+    margin-right: 10px;
+}
+
+.arrow {
+    margin-left: 5px;
+    color: rgb(100, 100, 100);
+    height: 12px;
+    margin-bottom: 5px;
+}
+
+.select button:focus {
+    border: 3.0px solid lightblue;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    border: 1.2px solid gray;
+    z-index: 2;
+    flex-direction: column;
+    transform: translate(0, 0px);
+    padding: 5px 0px 5px 0px;
+    margin-top: 32px;
+}
+
+.dropdownItems {
+    display: flex;
+    align-items: center;
+    padding: 5px 12px 5px 12px
+}
+
+.dropdownItems img {
+    margin-right: 10px;
+}
+
+.dropdownItems:hover {
+    background: rgb(228, 228, 228);
+}
+
+.output::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 22px solid #fff;
+    border-left: 22px solid transparent;
+}
+
+.output {
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    display: block;
+    width: 1px;
+    height: 16px;
+    border-left: 1px solid transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 4.8px;
+    bottom: -2px;
+    border-color: var(--sec-blue);
+}
+
+.redo {
+    margin-left: 15px;
+    width: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--sec-blue);
+    transition: 1s;
+}
+
+.redo:hover {
+    transform: rotate(360deg);
+}
+
+.bottomInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bottom {
+    font-size: 11px;
+    text-align: left;
+    width: 110px;
+}
+
+.mais {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.mais a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mais a>* {
+    background: var(--dark-gray);
+    border: 0.1px solid var(--dark-gray);
+    border-radius: 20px;
+    color: white;
+    font-size: 24px;
+    margin-left: 5px;
+    transition: 0.15s ease;
+}
+
+.mais:hover a>* {
+    transform: translateX(4px);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1115px) {
+
+} 

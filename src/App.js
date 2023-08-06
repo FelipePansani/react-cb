@@ -1,52 +1,53 @@
-import React from 'react'
+import { React, useState } from 'react';
 import './App.css';
-import Navbar from './components/upperComponents/Navbar'
-import SocialMediaBar from './components/upperComponents/SocialMediaBar'
-import Carousel from './components/upperComponents/Carousel'
-import SocialMedia from './components/upperComponents/SocialMedia'
-import Cotation from './components/Cotation'
-import Footer from './components/Footer'
-import Services from './components/Services'
-import NotasImprensa from './components/NotasImprensa'
-import Converter from './components/Converter'
-import Panorama from './components/Panorama'
-import BottomComponent from './components/BottomComponent'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Menu from './components/Top/Menu/Menu';
+import TopComponents from './components/Top/TopComponents';
+import MainComponents from './components/Main/MainComponents';
+import Footer from './components/Footer/Footer';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Transition } from 'react-transition-group';
+import MenuCSS from './components/Top/Menu/Menu.module.css'
 
 library.add(fab, faCheckSquare, faCoffee);
 
 function App() {
+
+  const [open, setOpen] = useState(false)
+
+  const defaultStyle = {
+    transition: 'transform 400ms ease-in',
+    transform: 'translateX(-100%)',
+  }
+
+  const transitionStyles = {
+    entering: { transform: 'translateX(0%)' },
+    entered: { transform: 'translateX(0%)' },
+    exiting: { transform: 'translateX(0%)' },
+    exited: { transform: 'translateX(-100%)' },
+  };
+
   return (
-    <div>
-      {/* upper componentes */}
-      <Navbar  />
-      <div className="socialmediabar">
-        <SocialMediaBar />
-      </div>
-      <div className="App">
-        <Carousel />
-        <div className="socialmedia">
-          <SocialMedia />
+    <div className='App'>
+        <Transition in={open} timeout={100}>
+          {state => (
+            <div className={MenuCSS.menu} style={{
+              ...defaultStyle,
+              ...transitionStyles[state]
+            }}>
+              <Menu setOpen={setOpen} />
+            </div>
+          )}
+        </Transition>
+    
+      <TopComponents setOpen={setOpen} />
+      {!open && (
+        <div>
+          <MainComponents />
+          <Footer />
         </div>
-        {/* upper componentes */}
-        <div className="lowerComponents">
-          <div style={{ flex: 1 }}>
-            <Cotation />
-            <Converter />
-          </div>
-          <div style={{ flex: 1 }}>
-            <Services />
-            <NotasImprensa />
-          </div>
-          <div style={{ flex: 1 }}>
-            <Panorama />
-            <BottomComponent />
-          </div>
-        </div>
-        <Footer />
-      </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,204 @@
+.mainCarousel {
+    background: #085e74;
+    color: #ffffff;
+    display: flex;
+    height: 240px;
+    position: relative;
+    z-index: 5;
+    top: 120px;
+    padding-inline: 30px;
+}
+
+.mainText {
+    display: flex;
+    flex: 1;
+    animation: smooth 0.6s ease-in; 
+}
+
+.title {
+    height: 20%;
+    color: var(--sec-yellow);
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, serif;
+    animation: smooth 0.6s ease-in;
+}
+
+.fakeImage {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 48px;
+    animation: smooth 0.6s ease-in;
+}
+
+.arrowColumn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-inline: 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.arrowColumn > * {
+    font-size: 26px;
+    color: lightblue;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+.arrowColumn:hover {
+    opacity: 0.4;
+}
+
+.column {
+    width: 80%;
+}
+
+#firstColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.bottomBtns {
+    display: flex;
+}
+
+.carouselBtn {
+    flex: 1;
+}
+
+.carouselBtn button {
+    height: 3px;
+    width: 40px;
+    border: none;
+    margin-right: 6px;
+    background: lightblue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.carouselBtn button:hover {
+    background: gray;
+}
+
+.doubleBtn {
+    display: flex;
+    align-items: center;
+}
+
+.doubleBtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 0px 0.6px white;
+    cursor: pointer;
+}
+
+.doubleBtn button:nth-child(1) {
+    font-size: 18px;
+    width: 30px;
+    border-radius: 2px 0 0 2px;
+    height: 34px;
+}
+
+.doubleBtn button:nth-child(2) {
+    border-radius: 0 2px 2px 0;
+    height: 34px;
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .mainCarousel {
+        top: 127.2px;
+        height: 220px;
+    }
+    .mainText {
+        display: none;
+    }
+    #firstColumn {
+        display: flex;
+        width: 45%;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 2;
+    }
+    .doubleBtn button:nth-child(2) {
+        display: none;
+    }
+    .doubleBtn button:nth-child(1) {
+        border-radius: 4px;
+    }
+    .carouselBtn button {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mainCarousel {
+        height: 160px;
+        top: 127.4px;
+    }
+    .mainText {
+        display: none;
+    }
+    #firstColumn {
+        width: 100%;
+    }
+    .arrowColumn > * {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {  
+    .mainCarousel {
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
+    .fakeImage {
+        height: 200px;
+        width: 100%;
+    }
+    .title {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .doubleBtn button:nth-child(1) {
+        border-radius: 4px 0px 0 4px;
+    }
+    .doubleBtn button:nth-child(2) {
+        display: block;
+    }
+} 

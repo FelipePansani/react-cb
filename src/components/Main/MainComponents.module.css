@@ -1,0 +1,40 @@
+.mainComponent {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.mainComponent > div {
+    width: 33%;
+}
+
+.smallScreenMainFirstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.smallScreenMainFirstRow > div {
+    width: 100%;
+}
+
+@media screen and (max-width: 1115px) {
+    .mainComponent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+    .mainComponent > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainComponent > *{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,11 @@
+.govbar {
+    display: flex;
+    flex-direction: row;
+    background: rgb(15, 21, 73);
+    color: #fff;
+    height: 40px;
+}
+
+.right {
+    display: flex;
+}

@@ -1,0 +1,188 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.servicesBox {
+    width: 104%;
+    padding-inline: 15px;
+    border-left: 1.4px solid rgb(232, 232, 232);
+    margin-bottom: 5px;
+}
+
+.upperList {
+    display: flex;
+    margin-bottom: -23px;
+    margin-left: 5px;
+}
+
+.upperList .upperBtn::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-top: 18px solid #fff;
+    border-right: 18px solid transparent;
+}
+
+.upperList .upperBtn {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 45px;
+    padding: 5px 15px 5px 15px;
+    margin-right: 2.5px;
+    border-top-right-radius: 8px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.upperList .upperBtn p {
+    width: 80px;
+    margin-left: 5px;
+}
+
+.activeUpBtn {
+    text-align: center;
+    animation: smooth 0.1s;
+}
+
+.tabLine {
+    position: relative;
+    z-index: 2;
+    top: -4.2px;
+    animation: smooth 0.1s;
+}
+
+.menuList::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 60px solid #fff;
+    border-left: 60px solid transparent;
+}
+
+.menuList {
+    position: relative;
+    z-index: 1;
+    background: #ebebeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 15px;
+    flex-wrap: wrap;
+    min-height: 300px;
+    max-height: fit-content;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.menuList .row {
+    display: flex;
+    flex-direction: column;
+    animation: smooth 0.6s ease-in;
+    transition: 0.6s;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    margin: 0 5px 20px 5px;
+    font-size: 15px;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.options img {
+    margin-right: 5px;
+    transition: 0.2s ease;
+}
+
+.options {
+    animation: smooth 0.6s;
+}
+
+.options p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.options:hover img {
+    transform: translateX(4px);
+}
+
+.options:hover p {
+    text-decoration: underline;
+}
+
+.div:nth-child(1) {
+    text-align: right;
+}
+
+.line {
+    display: block;
+    width: 2.2px;
+    height: 24.2px;
+    border-right: 1px solid transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 7px;
+    bottom: 24.2px;
+}
+
+/* ICONES / ICONS */
+.maisServiços {
+    text-align: right;
+}
+
+.maisServiços a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.maisServiços a>* {
+    background: var(--dark-gray);
+    border-radius: 20px;
+    border: 1px solid var(--dark-gray);
+    color: white;
+    font-size: 24px;
+    margin-left: 5px;
+    transition: 0.15s ease;
+}
+
+.maisServiços:hover a>* {
+    transform: translateX(4px);
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .menuList {
+        flex-direction: column;
+    }
+    .servicesBox {
+        width: 100%;
+    }
+}

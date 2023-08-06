@@ -1,0 +1,31 @@
+.socialmediabar {
+    background: var(--primary-blue);
+    display: none;
+    justify-content: center;
+    z-index: 6;
+    width: 100%;
+    margin-top: 105px;
+    position: fixed;
+}
+
+.socialmediabar .icons {
+    margin-left: 55px;
+} 
+
+.socialmediabar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+} 
+
+.socialmediabar button > * {
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 1115px) {
+    .socialmediabar {
+        display: flex;
+    }
+}

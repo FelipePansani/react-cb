@@ -1,0 +1,69 @@
+.socialmedia {
+    display: flex;
+    position: fixed;
+    height: 260px;
+    top: 40%;
+    left: -38px;
+    box-shadow: 0.2px 0.2px 5px var(--dark-gray);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: 0.4s;
+    z-index: 8;
+    width: auto;
+}
+ 
+.socialmedia .menu {
+    background: var(--social-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    flex-direction: column;
+}
+
+.socialmedia .menu button {
+    font-size: 19px;
+    transition: 0.3s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.socialmedia button {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.socialmedia .menu button:hover {
+    transform: scale(1.3) rotate(20deg);
+}
+
+.arrowColumn {
+    background: var(--sec-social-yellow);
+    cursor: pointer;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s ease-out;
+    border: none;
+}
+
+.arrowColumn > * {
+    transform: rotate(-90deg) translateY(-5px);
+    color:var(--primary-blue);
+    font-size: 18px;
+    transition: 0.1s ease-out;
+}
+
+#closed:hover > * {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1115px) {
+    .socialmedia {
+        display: none;
+    }
+}  
